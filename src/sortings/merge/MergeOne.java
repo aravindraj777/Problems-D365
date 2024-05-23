@@ -50,7 +50,7 @@ public class MergeOne {
     }
 
     public static void main(String[] args) {
-        int[] a1 = {1,3,7,8,2,4,5,6};
+        int[] a1 = {71,3,7,8,2,4,5,6};
         int[] sortedArray = mergeSort(a1);
         System.out.println(Arrays.toString(sortedArray));
     }
