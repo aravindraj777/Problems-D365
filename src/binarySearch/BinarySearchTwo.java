@@ -5,9 +5,15 @@ public class BinarySearchTwo {
     public static void main(String[] args) {
 
         int[] arr = {2,4,5,6,7,8,9};
-        int target = 2;
+        int target = 10;
         int position = binarySearchHelper(target,arr);
-        System.out.println("value found at position "+ position);
+        if (position == -1){
+            System.out.println("Value not found");
+        }
+        else {
+            System.out.println("value found at position "+ position);
+        }
+
 
     };
 
@@ -27,6 +33,7 @@ public class BinarySearchTwo {
                 return mid;
             }
         }
+
         return -1;
     }
 
