@@ -105,8 +105,9 @@ class NineMain {
         binarySearchTreeNine.insert(33);
         binarySearchTreeNine.insert(22);
 
-//      binarySearchTreeNine.inOrder(binarySearchTreeNine.root);
-        binarySearchTreeNine.delete(21);
+      binarySearchTreeNine.inOrder(binarySearchTreeNine.root);
+        System.out.println("===================");
+        binarySearchTreeNine.delete(56);
         binarySearchTreeNine.inOrder(binarySearchTreeNine.root);
     }
 }
