@@ -69,7 +69,7 @@ public class BinarySearchTreeTen {
     public int rightMinValue(Node  root){
 
         Node curr = root;
-        while (curr != null){
+        while (curr.left != null){
             curr = curr.left;
         }
         return curr.value;
