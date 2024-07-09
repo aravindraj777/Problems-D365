@@ -30,27 +30,18 @@ public class ReverseList {
         height++;
     }
 
-    public Node reverse(Node head){
-
-        Node temp = head;
-        if (temp == null)
-        {
-            return null;
-        }
-
-        Node curr = temp;
-        Node prev = null;
-        Node forw = null;
+    public Node reverseList(Node head) {
+      Node prev = null;
+        Node current = head;
 
 
-        while (curr != null){
-            forw = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = forw;
+        while(current != null) {
+           Node next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
         }
         return prev;
-
     }
 
     public void printList(){
@@ -70,7 +61,7 @@ public class ReverseList {
         reverseList.addNode(33);
 
         reverseList.printList();
-        reverseList.reverse(reverseList.head);
+        reverseList.head = reverseList.reverseList(reverseList.head);
 
         System.out.println("================");
         reverseList.printList();

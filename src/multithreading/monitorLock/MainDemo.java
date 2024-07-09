@@ -1,5 +1,7 @@
 package multithreading.monitorLock;
 
+import java.lang.ref.WeakReference;
+
 public class MainDemo {
 
     public static void main(String[] args) {
@@ -19,6 +21,8 @@ public class MainDemo {
 
         producerThread.start();
         consumerThread.start();
+
+
 
     }
 }
