@@ -4,7 +4,7 @@ public class LongestPalindromeTwo {
 
     public static void main(String[] args) {
 
-        String str = "malayala";
+        String str = "malayalam";
 
         String longestPalindrome = "";
 
