@@ -46,6 +46,48 @@ public class TBinarySearchTreeFIve {
         printTreeInOrder(root.right);
 
     }
+
+    public void deleteValueFromTree(int value){
+        root = deletionHelper(value,root);
+    }
+    private Node deletionHelper(int value,Node root){
+
+        if (root == null){
+            return null;
+        } else if (root.value > value) {
+            root.left = deletionHelper(value,root.left);
+        } else if (root.value < value) {
+            root.right = deletionHelper(value,root.right);
+        }
+
+        else {
+
+            if (root.left == null && root.right == null){
+                return null;
+            } else if (root.left == null) {
+                root = root.right;
+            }
+            else if (root.right == null){
+                root = root.left;
+            }
+            else {
+                int minValueFromRight = minValueFromRight(root.right);
+                root.value = minValueFromRight;
+                root.right = deletionHelper(minValueFromRight,root.right);
+            }
+
+        }
+        return root;
+    }
+
+    private int minValueFromRight(Node root){
+
+        Node curr = root;
+        while (curr.left != null){
+            curr = curr.left;
+        }
+        return curr.value;
+    }
 }
 
 class TreeFiveMain{
@@ -58,6 +100,9 @@ class TreeFiveMain{
         tBinarySearchTreeFIve.insert(12);
         tBinarySearchTreeFIve.insert(90);
 
+        tBinarySearchTreeFIve.printTreeInOrder(tBinarySearchTreeFIve.root);
+        tBinarySearchTreeFIve.deleteValueFromTree(22);
+        System.out.println("============");
         tBinarySearchTreeFIve.printTreeInOrder(tBinarySearchTreeFIve.root);
     }
 }
