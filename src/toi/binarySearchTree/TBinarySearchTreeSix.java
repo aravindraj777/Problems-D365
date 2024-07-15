@@ -46,9 +46,18 @@ public class TBinarySearchTreeSix {
         if (root == null){
             return;
         }
-        System.out.println(root.value);
+        System.out.println(root.value+ " ");
         preOrderTraversal(root.left);
         preOrderTraversal(root.right);
+    }
+
+    public void postOrder(Node root){
+        if (root == null){
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.println(root.value+ " ");
     }
 
 
@@ -62,5 +71,10 @@ class mainTreeSix {
         tBinarySearchTreeSix.insert(11);
 
         tBinarySearchTreeSix.inOrderTraversal(tBinarySearchTreeSix.root);
+        System.out.println("==========================================");
+        System.out.println("PreOrder");
+        tBinarySearchTreeSix.preOrderTraversal(tBinarySearchTreeSix.root);
+        System.out.println("==========================================");
+        tBinarySearchTreeSix.postOrder(tBinarySearchTreeSix.root);
     }
 }
