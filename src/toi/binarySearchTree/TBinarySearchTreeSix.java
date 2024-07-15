@@ -41,6 +41,17 @@ public class TBinarySearchTreeSix {
         System.out.println(root.value + " ");
         inOrderTraversal(root.right);
     }
+
+    public void preOrderTraversal(Node root){
+        if (root == null){
+            return;
+        }
+        System.out.println(root.value);
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+
 }
 class mainTreeSix {
     public static void main(String[] args) {
