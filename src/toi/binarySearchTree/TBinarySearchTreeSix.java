@@ -32,6 +32,15 @@ public class TBinarySearchTreeSix {
         }
         return root;
     }
+
+    public void inOrderTraversal(Node root){
+        if (root == null){
+            return;
+        }
+        inOrderTraversal(root.left);
+        System.out.println(root.value + " ");
+        inOrderTraversal(root.right);
+    }
 }
 class mainTreeSix {
     public static void main(String[] args) {
@@ -40,5 +49,7 @@ class mainTreeSix {
         tBinarySearchTreeSix.insert(43);
         tBinarySearchTreeSix.insert(22);
         tBinarySearchTreeSix.insert(11);
+
+        tBinarySearchTreeSix.inOrderTraversal(tBinarySearchTreeSix.root);
     }
 }
