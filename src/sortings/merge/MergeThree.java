@@ -12,6 +12,9 @@ public class MergeThree {
         int midIndex = arr.length / 2;
         int[] right = Arrays.copyOfRange(arr,0,midIndex);
         int[] left  = Arrays.copyOfRange(arr,midIndex,arr.length);
+
+        left = mergeSort(left);
+        right = mergeSort(right);
         return merge(left,right);
     }
 
