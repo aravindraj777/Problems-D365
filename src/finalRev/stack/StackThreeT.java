@@ -2,35 +2,34 @@ package finalRev.stack;
 
 import java.util.EmptyStackException;
 
-public class StackTwoT {
+public class StackThreeT {
 
     Node top;
-    int height;
+    int height ;
     class Node {
-
+        String value;
         Node next;
-        int value;
 
-        Node (int value){
+        Node (String value){
             this.value = value;
             this.next = null;
         }
     }
 
-    public void push(int value){
+    public void push(String value){
         Node newNode  = new Node(value);
         if(height == 0){
             top = newNode;
         }
         else {
-            newNode.next = top;
-            top = newNode;
-
+           newNode.next = top;
+           top = newNode;
         }
-        height++;
+        height ++ ;
     }
 
     public Node pop(){
+
         if (height == 0){
             throw new EmptyStackException();
         }
@@ -43,38 +42,37 @@ public class StackTwoT {
     }
 
     public void printStack(){
-
         Node temp = top;
         System.out.print("[");
         while (temp != null){
-            System.out.print(temp.value + " ");
+            System.out.print(temp.value+" ");
             temp = temp.next;
         }
-        System.out.println("]");
+        System.out.print("]");
     }
-    public void reversePrintStack(Node top){
+
+    public void reversePrint(Node top){
 
         if (top == null){
             return;
         }
-        reversePrintStack(top.next);
-        System.out.println(top.value+ " ");
-
+        reversePrint(top.next);
+        System.out.print(top.value);
     }
 }
 
-class StackTwoMain{
+class ThreeMain {
 
     public static void main(String[] args) {
-        StackTwoT stack = new StackTwoT();
-        stack.push(44);
-        stack.push(54);
-        stack.push(34);
-        stack.push(22);
+
+        StackThreeT stack = new StackThreeT();
+        stack.push("A");
+        stack.push("B");
+        stack.push("C");
+        stack.push("D");
 
         stack.printStack();
-        stack.pop();
-        stack.printStack();
-        stack.reversePrintStack(stack.top);
+        stack.reversePrint(stack.top);
+
     }
 }
