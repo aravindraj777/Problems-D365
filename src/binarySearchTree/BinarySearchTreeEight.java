@@ -49,6 +49,33 @@ public class BinarySearchTreeEight {
         inOrder(root.right);
 //        return;
     }
+
+    public void searchNode(Node root,int value,Node parent){
+
+        if (root == null){
+            System.out.println("No key present");
+            return;
+        }
+
+        if (root.value == value){
+            if (parent == null){
+                System.out.println("This is the parent node ");
+            } else if (parent.value > value) {
+                System.out.println("This is the left child of " + parent.value);
+            }
+            else {
+                System.out.println("This is the right child of "+ parent.value);
+            }
+            return;
+        }
+
+        if (root.value > value){
+            searchNode(root.left,value,root);
+        }
+        else {
+            searchNode(root.right,value,root);
+        }
+    }
 }
 
 class EightMain{
@@ -64,6 +91,7 @@ class EightMain{
 
 
         binarySearchTreeEight.inOrder(binarySearchTreeEight.root);
+        binarySearchTreeEight.searchNode(binarySearchTreeEight.root,43,null);
 //        System.out.println(binarySearchTreeEight.inOrder(binarySearchTreeEight.root));
     }
 }
