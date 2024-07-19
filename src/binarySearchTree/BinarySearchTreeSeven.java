@@ -62,10 +62,14 @@ class SevenMain {
 
         BinarySearchTreeSeven binarySearchTreeSeven = new BinarySearchTreeSeven();
         binarySearchTreeSeven.insert(56);
+        binarySearchTreeSeven.insert(56);
         binarySearchTreeSeven.insert(67);
         binarySearchTreeSeven.insert(32);
         binarySearchTreeSeven.insert(90);
-        System.out.println(binarySearchTreeSeven.root.value);
+
+//        System.out.println(binarySearchTreeSeven.root.value);
+//        System.out.println(binarySearchTreeSeven.root.left.value);
+//        System.out.println(binarySearchTreeSeven.root.right.value);
 
         binarySearchTreeSeven.inOrder();
 
