@@ -1,4 +1,4 @@
-package bstGithubPractice;
+package github.bstGithubPractice;
 
 /*
 Given a BST, write an efficient function to search a given key in it.

@@ -1,4 +1,4 @@
-package bstGithubPractice;
+package github.bstGithubPractice;
 
      /*
     Determine whether a given binary tree is a BST or not
@@ -77,15 +77,17 @@ class MainValidBinarySearchTree{
 
     public static void main(String[] args) {
         ValidBstRecursive validation = new ValidBstRecursive();
-        validation.insert(45);
-        validation.insert(22);
-        validation.insert(11);
-        validation.insert(90);
-        validation.insert(56);
-        validation.insert(46);
+//        validation.insert(45);
+//        validation.insert(22);
+//        validation.insert(11);
+//        validation.insert(90);
+//        validation.insert(56);
+//        validation.insert(46);
 
         validation.inOrder(validation.root);
         validation.isValidBst(validation.root);
+
+
     }
 
 }

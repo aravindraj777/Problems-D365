@@ -1,4 +1,4 @@
-package basicQuestions;
+package github.basicQuestions;
 
 public class NewTest {
 

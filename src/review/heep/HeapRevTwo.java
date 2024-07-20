@@ -3,7 +3,7 @@ package review.heep;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class HeapRevTwo {
+public class HeapRevTwo{
 
     public void buildHeap(ArrayList<Integer> arr) {
         int n = arr.size();
@@ -51,6 +51,7 @@ public class HeapRevTwo {
 class RevHeapOneMain {
 
     public static void main(String[] args) {
+
         HeapRevTwo heapRevTwo = new HeapRevTwo();
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(78);

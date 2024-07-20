@@ -1,4 +1,4 @@
-package bstGithubPractice;
+package github.bstGithubPractice;
 
 /*
     Given an unsorted integer array that represents binary search tree (BST) keys,
@@ -6,7 +6,6 @@ package bstGithubPractice;
      the difference between its left and right subtree height is at most 1.
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
