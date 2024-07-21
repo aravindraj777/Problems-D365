@@ -13,15 +13,6 @@ public class HeapBuildHeapifyDown {
     public void insert(int value){
         heap.add(value);
         heapifyUp(heap.size() - 1);
-//        if (heap.isEmpty()) {
-//            heap.add(value);
-//            return;
-//        }
-//
-//        // Add the new value at the end of the heap array
-//        heap.add(heap.get(0)); // Temporarily add the current root at the end
-//        heap.set(0, value);    // Place the new value at the root
-//        heapifyDown(0);
     }
     private void heapifyUp(int index){
 
@@ -42,24 +33,42 @@ public class HeapBuildHeapifyDown {
         System.out.println(heap);
     }
 
-////    private void heapifyDown(int index){
-////
-////        int leftChildIndex = 2 * index + 1;
-////        int rightChildIndex = 2 * index + 2;
-////        int largestIndex = index;
-////
-////        if (leftChildIndex < heap.size() && heap.get(leftChildIndex) > heap.get(largestIndex)){
-////            largestIndex = leftChildIndex;
-////        }
-////        if (rightChildIndex < heap.size() && heap.get(rightChildIndex) > heap.get(largestIndex)){
-////            largestIndex = rightChildIndex;
-////        }
-////        if (largestIndex != index){
-////            swap(index,largestIndex);
-////            heapifyDown(largestIndex);
-////        }
-//
-//    }
+
+
+    public void heapSort(){
+        buildMaxHeap();
+        int n = heap.size();
+        for (int i = n-1 ; i> 0 ;i-- ){
+            swap(0,i);
+            heapifyDown(0,i);
+        }
+    }
+
+    private void buildMaxHeap(){
+        int n = heap.size();
+        for (int i = n/2 - 1; i >= 0 ; i--){
+            heapifyDown(i,n);
+        }
+    }
+
+    private void heapifyDown(int index, int size) {
+        int leftChildIndex = 2 * index + 1;
+        int rightChildIndex = 2 * index + 2;
+        int largestIndex = index;
+
+        if (leftChildIndex < size && heap.get(leftChildIndex) > heap.get(largestIndex)) {
+            largestIndex = leftChildIndex;
+        }
+
+        if (rightChildIndex < size && heap.get(rightChildIndex) > heap.get(largestIndex)) {
+            largestIndex = rightChildIndex;
+        }
+
+        if (largestIndex != index) {
+            swap(index, largestIndex);
+            heapifyDown(largestIndex, size);
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -70,6 +79,9 @@ public class HeapBuildHeapifyDown {
         heap.insert(90);
         heap.insert(100);
 
+        heap.printHeap();
+        heap.heapSort();
+        System.out.println("===========");
         heap.printHeap();
     }
 }
