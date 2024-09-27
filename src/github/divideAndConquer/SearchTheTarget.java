@@ -4,7 +4,7 @@ public class SearchTheTarget {
 
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9};
-        int target = 3;
+        int target = 9;
         int place = search(arr,target);
         System.out.println("The target is in index "+ place);
     }
@@ -15,7 +15,7 @@ public class SearchTheTarget {
         int right = arr.length - 1;
 
 
-        while (left < right){
+        while (left <= right){
             int mid = left+ (right - left)/2;
 
             if (arr[mid] < target){
