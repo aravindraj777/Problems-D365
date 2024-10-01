@@ -1,4 +1,4 @@
-package github.FunctionalInterface;
+package github.functionalInterface;
 
 public class Function {
 

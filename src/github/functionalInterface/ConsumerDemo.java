@@ -1,4 +1,4 @@
-package github.FunctionalInterface;
+package github.functionalInterface;
 
 import java.util.function.Consumer;
 
