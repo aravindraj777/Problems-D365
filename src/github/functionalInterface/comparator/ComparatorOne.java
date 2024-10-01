@@ -1,4 +1,4 @@
-package comparator;
+package github.functionalInterface.comparator;
 
 import java.util.Arrays;
 
