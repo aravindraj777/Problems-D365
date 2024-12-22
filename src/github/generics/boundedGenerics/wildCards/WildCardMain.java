@@ -16,7 +16,7 @@ public class WildCardMain {
 //        Vehicle list is acceptable as it is lower bound happening hereg
         printObj.setPrintValues(vehicleList);
 
-//        For wild card method
+//        For wild card methodgi
         List<Integer> integerList = new ArrayList<>();
         List<Float> floatList = new ArrayList<>();
         List<Integer> integerList1 = new ArrayList<>();
