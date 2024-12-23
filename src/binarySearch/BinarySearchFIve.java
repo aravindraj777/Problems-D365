@@ -1,6 +1,6 @@
 package binarySearch;
 
-public class BinarySearchFIve {
+public class    BinarySearchFIve {
 
     public static void main(String[] args) {
 
