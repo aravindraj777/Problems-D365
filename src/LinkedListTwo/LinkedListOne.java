@@ -96,6 +96,7 @@ public class LinkedListOne {
         linkedList.push("D");
         linkedList.push("E");
         linkedList.push("A");
+        linkedList.push("E");
 
         linkedList.printList();
         System.out.println("==============");
