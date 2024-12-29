@@ -1,6 +1,10 @@
 package daivikSoft;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.OptionalInt;
+import java.util.stream.Collectors;
 
 public class DemoOne {
 
@@ -15,6 +19,12 @@ public class DemoOne {
         boolean another = s1.equals(s2);
         System.out.println(another);
 
+        String collect = s1.chars()
+                .mapToObj(c -> String.valueOf((char) c))
+                .collect(Collectors.joining("|"));
+
+
+        System.out.println(collect);
 //        J|A|V|A
 
 //        StringBuilder stringBuilder = new StringBuilder(s1);
@@ -34,13 +44,24 @@ public class DemoOne {
 //        int length = sentence.split(" ").length;
 //        System.out.println(length);
 
-        long wordCount = Arrays.stream(sentence.trim().split("\\s+"))
-                .count();
-        System.out.println(wordCount);
+//        Arrays.stream(sentence)
+//                int count=0;
+//        for (int i = 0; i < sentence.length(); i++) {
+//            int i1 = sentence.indexOf(" ");
+//            String substring = sentence.substring(0, i1);
+//
+//            System.out.println(substring);
+//        }
+//
+        }
+
+//        long wordCount = Arrays.stream(sentence.trim().split("\\s+"))
+//                .count();
+//        System.out.println(wordCount);
     }
 
 
 
 
 
-}
+//}
